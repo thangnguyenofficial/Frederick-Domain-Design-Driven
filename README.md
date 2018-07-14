@@ -1,4 +1,4 @@
-<img src="https://serving.photos.photobox.com/14514661d92a1bff01f3a1029311e2c72c4f9a09d752e0e814fca4bf10af01a48fd77cf7.jpg" alt="Frederick DDD Project"> 
+<img src="https://serving.photos.photobox.com/14514661d92a1bff01f3a1029311e2c72c4f9a09d752e0e814fca4bf10af01a48fd77cf7.jpg" alt="Frederick DDD Project" style="width:40%;"> 
 
 What is the Frederick DDD Project?
 =====================
