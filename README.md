@@ -24,3 +24,20 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 - MediatR
 - Swagger UI
 
+## Architecture:
+
+- Domain Driven Design (Application Layer, Domain Layer, Infrastructure Layer)
+- Domain Events
+- Domain Notification
+- CQRS (Command Query Responsibility Segregation)
+- Event Sourcing
+- Unit of Work
+- Repository and Generic Repository
+
+## Disclaimer:
+- **NOT** intended to be a definitive solution
+- Beware to use in production way
+- Maybe you don't need a lot of implementations that is included, try avoid the **over engineering**
+
+## About:
+The Frederick DDD Project was developed by [Frederick Nguyen](https://www.facebook.com/frederick020990) and [BUCA JSC Development team] (http://buca.vn/)
