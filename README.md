@@ -45,5 +45,4 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 The Frederick DDD Project was developed by [Frederick Nguyen](https://www.facebook.com/frederick020990) and [BUCA JSC Development team](http://buca.vn)
 
 ## Wiki:
-See [Wiki](https://github.com/thangndbuca/Frederick-Domain-Design-Driven/wiki)
-Overview knowledge about DDD, CQRS, Event Sourcing that support you understand all layers and why you need use them in Frederick DDD project
+See [Wiki](https://github.com/thangndbuca/Frederick-Domain-Design-Driven/wiki) to understand DDD, CQRS, Event Sourcing that support you understand all layers and why you need use them in Frederick DDD project
