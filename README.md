@@ -1,3 +1,5 @@
+<img src="https://serving.photos.photobox.com/14514661d92a1bff01f3a1029311e2c72c4f9a09d752e0e814fca4bf10af01a48fd77cf7.jpg" alt="Frederick DDD Project"> 
+
 What is the Frederick DDD Project?
 =====================
 Frederick DDD is open-source project written in .NET Core. 
@@ -40,4 +42,4 @@ To know more about how to setup your enviroment visit the [Microsoft .NET Downlo
 - Maybe you don't need a lot of implementations that is included, try avoid the **over engineering**
 
 ## About:
-The Frederick DDD Project was developed by [Frederick Nguyen](https://www.facebook.com/frederick020990) and [BUCA JSC Development team] (http://buca.vn/)
+The Frederick DDD Project was developed by [Frederick Nguyen](https://www.facebook.com/frederick020990) and [BUCA JSC Development team](http://buca.vn)
