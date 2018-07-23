@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FrederickNguyen.ApplicationLayer\FrederickNguyen.ApplicationLayer.csproj" />
+    <ProjectReference Include="..\FrederickNguyen.DomainCore\FrederickNguyen.DomainCore.csproj" />
+    <ProjectReference Include="..\FrederickNguyen.DomainLayer\FrederickNguyen.DomainLayer.csproj" />
+    <ProjectReference Include="..\FrederickNguyen.Infrastructure.Components\FrederickNguyen.Infrastructure.Components.csproj" />
+    <ProjectReference Include="..\FrederickNguyen.Infrastructure\FrederickNguyen.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>

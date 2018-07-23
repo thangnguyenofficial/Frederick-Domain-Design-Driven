@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  frederick.webapi:
+    image: frederick.webapi
+    build:
+      context: .
+      dockerfile: Frederick.WebApi\Dockerfile

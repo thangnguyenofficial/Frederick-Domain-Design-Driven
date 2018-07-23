@@ -1,0 +1,13 @@
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.deps.json
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.pdb
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.pdb
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.pdb
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\obj\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\obj\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.csproj.CoreCompileInputs.cache
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\obj\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.AssemblyInfoInputs.cache
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\obj\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.AssemblyInfo.cs
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\obj\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.Infrastructure\obj\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.pdb

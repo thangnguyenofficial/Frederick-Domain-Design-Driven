@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FrederickNguyen.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:FrederickNguyen.WebApi.Controllers.ApiController">
+            <summary>
+            Class ApiController.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+        </member>
+        <member name="P:FrederickNguyen.WebApi.Controllers.ApiController.Errors">
+            <summary>
+            Gets the errors.
+            </summary>
+            <value>The errors.</value>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.ApiController.#ctor(MediatR.INotificationHandler{FrederickNguyen.DomainCore.Notification.DomainNotification},FrederickNguyen.DomainCore.Commands.ICommandDispatcher)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Controllers.ApiController" /> class.
+            </summary>
+            <param name="notificationHandler">The notification handler.</param>
+            <param name="commandBus">The command bus.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.ApiController.IsValidOperation">
+            <summary>
+            Determines whether [is valid operation].
+            </summary>
+            <returns><c>true</c> if [is valid operation]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Controllers.CartController">
+            <summary>
+            Class CartController.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="F:FrederickNguyen.WebApi.Controllers.CartController._cartService">
+            <summary>
+            The cart service
+            </summary>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CartController.#ctor(FrederickNguyen.ApplicationLayer.Services.ICartService,MediatR.INotificationHandler{FrederickNguyen.DomainCore.Notification.DomainNotification},FrederickNguyen.DomainCore.Commands.ICommandDispatcher)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Controllers.CartController" /> class.
+            </summary>
+            <param name="cartService">The cart service.</param>
+            <param name="notificationHandler">The notification handler.</param>
+            <param name="commandBusHandler">The command bus handler.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CartController.GetByCustomerId(System.Guid)">
+            <summary>
+            Gets the by customer identifier.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CartController.AddToCart(FrederickNguyen.ApplicationLayer.Models.AddProudctToCartViewModel)">
+            <summary>
+            Adds to cart.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CartController.RemoveProductFromCart(FrederickNguyen.ApplicationLayer.Models.RemoveProductFromCartViewModel)">
+            <summary>
+            Removes the product from cart.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CartController.Checkout(System.Guid)">
+            <summary>
+            Removes the product from cart.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Controllers.CustomerController">
+            <summary>
+            Class CustomerController.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.#ctor(FrederickNguyen.ApplicationLayer.Services.ICustomerService,MediatR.INotificationHandler{FrederickNguyen.DomainCore.Notification.DomainNotification},FrederickNguyen.DomainCore.Commands.ICommandDispatcher)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Controllers.CustomerController" /> class.
+            </summary>
+            <param name="customerService">The customer service.</param>
+            <param name="notificationHandler">The notification handler.</param>
+            <param name="commandBusHandler">The command bus handler.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.IsEmailAvailable(System.String)">
+            <summary>
+            check email is available.
+            </summary>
+            <param name="email">The email.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.GetCustomerById(System.Guid)">
+            <summary>
+            Gets the customer by identifier.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.GetPurchasesHistory(System.Guid)">
+            <summary>
+            Gets the purchases history.
+            </summary>
+            <param name="customerId">The customer identifier.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.AddCustomer(FrederickNguyen.ApplicationLayer.Models.AddNewCustomerViewModel)">
+            <summary>
+            Adds the customer.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.UpdateCustomer(FrederickNguyen.ApplicationLayer.Models.UpdateCustomerViewModel)">
+            <summary>
+            Updates the customer.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.DeleteCustomer(FrederickNguyen.ApplicationLayer.Models.RemoveCustomerViewModel)">
+            <summary>
+            Deletes the customer.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Controllers.ProductController">
+            <summary>
+            Class ProductController.
+            </summary>
+            <seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.ProductController.#ctor(FrederickNguyen.ApplicationLayer.Services.IProductService,MediatR.INotificationHandler{FrederickNguyen.DomainCore.Notification.DomainNotification},FrederickNguyen.DomainCore.Commands.ICommandDispatcher)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Controllers.ProductController"/> class.
+            </summary>
+            <param name="productService">The product service.</param>
+            <param name="notificationHandler">The notification handler.</param>
+            <param name="commandBusHandler">The command bus handler.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.ProductController.GetProductById(System.Guid)">
+            <summary>
+            Gets the product by identifier.
+            </summary>
+            <param name="productId">The product identifier.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Controllers.ProductController.AddProduct(FrederickNguyen.ApplicationLayer.Models.AddNewProductViewModel)">
+            <summary>
+            Adds the product.
+            </summary>
+            <param name="model">The model.</param>
+            <returns>IActionResult.</returns>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Program">
+            <summary>
+            Class Program.
+            </summary>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Program.Main(System.String[])">
+            <summary>
+            Defines the entry point of the application.
+            </summary>
+            <param name="args">The arguments.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Program.BuildWebHost(System.String[])">
+            <summary>
+            Builds the web host.
+            </summary>
+            <param name="args">The arguments.</param>
+            <returns>IWebHost.</returns>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Startup">
+            <summary>
+            Class Startup.
+            </summary>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Startup"/> class.
+            </summary>
+            <param name="configuration">The configuration.</param>
+        </member>
+        <member name="P:FrederickNguyen.WebApi.Startup.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Configures the services.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Configures the specified application.
+            </summary>
+            <param name="app">The application.</param>
+            <param name="env">The env.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Startup.RegisterServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers the services.
+            </summary>
+            <param name="services">The services.</param>
+        </member>
+    </members>
+</doc>

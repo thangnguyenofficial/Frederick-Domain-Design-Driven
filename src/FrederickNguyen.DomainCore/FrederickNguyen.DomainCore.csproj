@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Castle.Windsor" Version="4.1.0" />
+    <PackageReference Include="MediatR" Version="4.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="FluentValidation">
+      <HintPath>C:\Users\thangnd.BUCA\.nuget\packages\fluentvalidation\7.1.1\lib\netstandard1.0\FluentValidation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

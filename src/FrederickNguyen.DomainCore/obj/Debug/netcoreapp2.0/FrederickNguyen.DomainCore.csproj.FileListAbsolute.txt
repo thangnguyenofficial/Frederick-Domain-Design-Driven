@@ -1,0 +1,11 @@
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.deps.json
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.pdb
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\bin\Debug\netcoreapp2.0\FluentValidation.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\bin\Debug\netcoreapp2.0\FluentValidation.xml
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.csprojResolveAssemblyReference.cache
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.csproj.CoreCompileInputs.cache
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.AssemblyInfoInputs.cache
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.AssemblyInfo.cs
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.dll
+E:\Project\NghienCuu\DDD\FrederickNguyen.DomainCore\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.pdb
