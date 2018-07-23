@@ -5807,11 +5807,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.ApplicationLayer\\FrederickNguyen.ApplicationLayer.csproj",
+      "projectUniqueName": "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.ApplicationLayer\\FrederickNguyen.ApplicationLayer.csproj",
       "projectName": "FrederickNguyen.ApplicationLayer",
-      "projectPath": "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.ApplicationLayer\\FrederickNguyen.ApplicationLayer.csproj",
+      "projectPath": "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.ApplicationLayer\\FrederickNguyen.ApplicationLayer.csproj",
       "packagesPath": "C:\\Users\\thangnd.BUCA\\.nuget\\packages\\",
-      "outputPath": "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.ApplicationLayer\\obj\\",
+      "outputPath": "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.ApplicationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
@@ -5833,14 +5833,14 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.Infrastructure\\FrederickNguyen.Infrastructure.Data.csproj": {
-              "projectPath": "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.Infrastructure\\FrederickNguyen.Infrastructure.Data.csproj"
+            "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.Infrastructure\\FrederickNguyen.Infrastructure.Data.csproj": {
+              "projectPath": "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.Infrastructure\\FrederickNguyen.Infrastructure.Data.csproj"
             },
-            "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.Infrastructure.Components\\FrederickNguyen.Infrastructure.Components.csproj": {
-              "projectPath": "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.Infrastructure.Components\\FrederickNguyen.Infrastructure.Components.csproj"
+            "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.Infrastructure.Components\\FrederickNguyen.Infrastructure.Components.csproj": {
+              "projectPath": "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.Infrastructure.Components\\FrederickNguyen.Infrastructure.Components.csproj"
             },
-            "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.DomainLayer\\FrederickNguyen.DomainLayer.csproj": {
-              "projectPath": "E:\\Project\\NghienCuu\\DDD\\FrederickNguyen.DomainLayer\\FrederickNguyen.DomainLayer.csproj"
+            "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.DomainLayer\\FrederickNguyen.DomainLayer.csproj": {
+              "projectPath": "E:\\Project\\Github\\Frederick-Domain-Design-Driven\\src\\FrederickNguyen.DomainLayer\\FrederickNguyen.DomainLayer.csproj"
             }
           }
         }
