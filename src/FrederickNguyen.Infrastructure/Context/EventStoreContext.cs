@@ -14,6 +14,7 @@
 
 using System.IO;
 using FrederickNguyen.DomainCore.Events;
+using FrederickNguyen.DomainCore.EventSourcing;
 using FrederickNguyen.Infrastructure.Data.EntityConfigurations;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -29,7 +30,7 @@ namespace FrederickNguyen.Infrastructure.Data.Context
         /// Gets or sets the domain event records.
         /// </summary>
         /// <value>The domain event records.</value>
-        public DbSet<DomainEventRecord> DomainEventRecords { get; set; }
+        public DbSet<EventStoreRecord> EventStoreRecords { get; set; }
 
         /// <summary>
         /// Override this method to further configure the model that was discovered by convention from the entity types
@@ -43,7 +44,7 @@ namespace FrederickNguyen.Infrastructure.Data.Context
         /// then this method will not be run.</remarks>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfiguration(new DomainEventRecordEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new EventStoreRecordEntityTypeConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

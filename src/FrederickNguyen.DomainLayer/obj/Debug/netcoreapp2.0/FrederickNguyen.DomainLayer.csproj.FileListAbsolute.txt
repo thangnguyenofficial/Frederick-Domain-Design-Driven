@@ -18,9 +18,12 @@ E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\bin\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.Components.dll
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.pdb
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\bin\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.Components.pdb
-E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.csprojResolveAssemblyReference.cache
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.csproj.CoreCompileInputs.cache
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.AssemblyInfoInputs.cache
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.AssemblyInfo.cs
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.dll
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.pdb
+E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.csprojAssemblyReference.cache
+E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\obj\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.csproj.CopyComplete
+E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.DomainLayer\bin\Debug\netcoreapp2.0\Microsoft.Extensions.Logging.Abstractions.xml

@@ -24,14 +24,14 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.EventHandlers
     /// <summary>
     /// Class CustomerCreatedEvents.
     /// </summary>
-    public class CustomerCreatedEventHandler : IEventHandler<CustomerCreatedEvent>
+    public class CustomerCheckOutEventHandler : IEventHandler<CustomerCreatedEvent>
     {
         private readonly IEmailSender _emailSender;
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerCreatedEventHandler"/> class.
         /// </summary>
         /// <param name="emailSender">The email sender.</param>
-        public CustomerCreatedEventHandler(IEmailSender emailSender)
+        public CustomerCheckOutEventHandler(IEmailSender emailSender)
         {
             _emailSender = emailSender;
         }

@@ -5,12 +5,28 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="AggregatesModels\Customers\EventHandlers\CustomerCheckOutEventHandler.cs" />
+    <Compile Remove="AggregatesModels\Customers\Events\CustomerCheckOutEvent.cs" />
+    <Compile Remove="AggregatesModels\Products\CommandHandlers\ProductCommandHandler.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="7.1.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FrederickNguyen.DomainCore\FrederickNguyen.DomainCore.csproj" />
     <ProjectReference Include="..\FrederickNguyen.Infrastructure.Components\FrederickNguyen.Infrastructure.Components.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="AggregatesModels\Products\CommandHandlers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>C:\Users\thangnd.BUCA\.nuget\packages\microsoft.extensions.logging.abstractions\2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

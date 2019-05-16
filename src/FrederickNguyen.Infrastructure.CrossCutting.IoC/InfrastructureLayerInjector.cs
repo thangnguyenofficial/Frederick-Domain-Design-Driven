@@ -44,7 +44,7 @@ namespace FrederickNguyen.Infrastructure.CrossCutting.IoC
 
             //Infra - repository
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
-            services.AddScoped<IDomainEventRepository, DomainEventRepository>();
+            services.AddScoped<IEventStoreRepository, EventStoreRepository>();
             services.AddScoped<ICustomerRepository, CustomerRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<ICartRepository, CartRepository>();

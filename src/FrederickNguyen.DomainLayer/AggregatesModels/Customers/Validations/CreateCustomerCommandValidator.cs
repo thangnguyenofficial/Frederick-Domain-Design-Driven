@@ -34,11 +34,9 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Validations
             RuleFor(customer => customer.Email).NotEmpty().WithMessage("The email is required");
             RuleFor(customer => customer.Email).EmailAddress().WithMessage("Invalid Email Address");
 
-            //RuleFor(customer => customer.Password).NotEmpty().WithMessage("The password is required");
-            //RuleFor(customer => customer.Password).Must(ValidatePassword).WithMessage("password must be of minimum 8 characters length, includes number, " +
-            //                                                                          "upper char and lower char");
-
-            RuleFor(customer => customer.CountryId).NotEmpty().WithMessage("The country is required");
+            RuleFor(customer => customer.Password).NotEmpty().WithMessage("The password is required");
+            RuleFor(customer => customer.Password).Must(ValidatePassword).WithMessage("password must be of minimum 8 characters length, includes number, " +
+                                                                                      "upper char and lower char");
         }
 
         /// <summary>
@@ -51,13 +49,13 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Validations
             var input = password;
 
             var hasNumber = new Regex(@"[0-9]+");
-            var hasUpperChar = new Regex(@"[A-Z]+");
+            //var hasUpperChar = new Regex(@"[A-Z]+");
             var hasMiniMaxChars = new Regex(@".{8,100}");
             var hasLowerChar = new Regex(@"[a-z]+");
             //var hasSymbols = new Regex(@"[!@#$%^&*()_+=\[{\]};:<>|./?,-]");
 
             if (!hasLowerChar.IsMatch(input)) return false;
-            if (!hasUpperChar.IsMatch(input)) return false;
+            //if (!hasUpperChar.IsMatch(input)) return false;
             if (!hasMiniMaxChars.IsMatch(input)) return false;
             if (!hasNumber.IsMatch(input)) return false;
             //if (!hasSymbols.IsMatch(input)) return false;

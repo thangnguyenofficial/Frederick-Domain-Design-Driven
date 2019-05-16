@@ -118,13 +118,6 @@
             <param name="model">The model.</param>
             <returns>IActionResult.</returns>
         </member>
-        <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.UpdateCustomer(FrederickNguyen.ApplicationLayer.Models.UpdateCustomerViewModel)">
-            <summary>
-            Updates the customer.
-            </summary>
-            <param name="model">The model.</param>
-            <returns>IActionResult.</returns>
-        </member>
         <member name="M:FrederickNguyen.WebApi.Controllers.CustomerController.DeleteCustomer(FrederickNguyen.ApplicationLayer.Models.RemoveCustomerViewModel)">
             <summary>
             Deletes the customer.
@@ -159,6 +152,57 @@
             </summary>
             <param name="model">The model.</param>
             <returns>IActionResult.</returns>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Infrastructure.ActionResults.InternalServerErrorObjectResult">
+            <summary>
+            Class InternalServerErrorObjectResult.
+            </summary>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Infrastructure.ActionResults.InternalServerErrorObjectResult.#ctor(System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Infrastructure.ActionResults.InternalServerErrorObjectResult"/> class.
+            </summary>
+            <param name="error">The error.</param>
+        </member>
+        <member name="T:FrederickNguyen.WebApi.Infrastructure.Behaviors.LoggingBehavior`2">
+            <summary>
+            Class LoggingBehavior.
+            </summary>
+            <typeparam name="TRequest">The type of the t request.</typeparam>
+            <typeparam name="TResponse">The type of the t response.</typeparam>
+            <seealso cref="T:MediatR.IPipelineBehavior`2" />
+        </member>
+        <member name="F:FrederickNguyen.WebApi.Infrastructure.Behaviors.LoggingBehavior`2._logger">
+            <summary>
+            The logger
+            </summary>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Infrastructure.Behaviors.LoggingBehavior`2.#ctor(Microsoft.Extensions.Logging.ILogger{FrederickNguyen.WebApi.Infrastructure.Behaviors.LoggingBehavior{`0,`1}})">
+            <summary>
+            Initializes a new instance of the <see cref="T:FrederickNguyen.WebApi.Infrastructure.Behaviors.LoggingBehavior`2"/> class.
+            </summary>
+            <param name="logger">The logger.</param>
+        </member>
+        <member name="M:FrederickNguyen.WebApi.Infrastructure.Behaviors.LoggingBehavior`2.Handle(`0,System.Threading.CancellationToken,MediatR.RequestHandlerDelegate{`1})">
+            <summary>
+            Handles the specified request.
+            </summary>
+            <param name="request">The request.</param>
+            <param name="cancellationToken">The cancellation token.</param>
+            <param name="next">The next.</param>
+            <returns>Task&lt;TResponse&gt;.</returns>
+        </member>
+        <member name="P:FrederickNguyen.WebApi.Infrastructure.Filters.HttpGlobalExceptionFilter.JsonErrorResponse.Messages">
+            <summary>
+            Gets or sets the messages.
+            </summary>
+            <value>The messages.</value>
+        </member>
+        <member name="P:FrederickNguyen.WebApi.Infrastructure.Filters.HttpGlobalExceptionFilter.JsonErrorResponse.DeveloperMessage">
+            <summary>
+            Gets or sets the developer message.
+            </summary>
+            <value>The developer message.</value>
         </member>
         <member name="T:FrederickNguyen.WebApi.Program">
             <summary>

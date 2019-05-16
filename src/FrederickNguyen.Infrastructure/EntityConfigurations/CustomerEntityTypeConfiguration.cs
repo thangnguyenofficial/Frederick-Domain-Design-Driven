@@ -32,6 +32,12 @@ namespace FrederickNguyen.Infrastructure.Data.EntityConfigurations
             customerConfiguration.ToTable("Customer");
             customerConfiguration.HasKey(c => c.Id);
             customerConfiguration.Property(b => b.Balance).HasColumnType("money");
+            customerConfiguration.Ignore(b => b.DomainEvents);
+            
+            customerConfiguration.HasMany(b => b.CreditCards)
+               .WithOne()
+               .HasForeignKey("CustomerId")
+               .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

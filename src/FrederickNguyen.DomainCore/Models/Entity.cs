@@ -13,6 +13,9 @@
 // ***********************************************************************
 
 using System;
+using System.Collections.Generic;
+using FrederickNguyen.DomainCore.Events;
+using MediatR;
 
 namespace FrederickNguyen.DomainCore.Models
 {
@@ -95,6 +98,37 @@ namespace FrederickNguyen.DomainCore.Models
         public override string ToString()
         {
             return GetType().Name + " [Id=" + Id + "]";
+        }
+
+        /// <summary>
+        /// The domain events
+        /// </summary>
+        private List<DomainEvent> _domainEvents;
+
+        /// <summary>
+        /// Gets the domain events.
+        /// </summary>
+        /// <value>The domain events.</value>
+        public List<DomainEvent> DomainEvents => _domainEvents;
+
+        /// <summary>
+        /// Adds the domain event.
+        /// </summary>
+        /// <param name="eventItem">The event item.</param>
+        public void AddDomainEvent(DomainEvent eventItem)
+        {
+            _domainEvents = _domainEvents ?? new List<DomainEvent>();
+            _domainEvents.Add(eventItem);
+        }
+
+        /// <summary>
+        /// Removes the domain event.
+        /// </summary>
+        /// <param name="eventItem">The event item.</param>
+        public void RemoveDomainEvent(DomainEvent eventItem)
+        {
+            if (DomainEvents is null) return;
+            DomainEvents.Remove(eventItem);
         }
     }
 }

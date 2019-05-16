@@ -14,14 +14,12 @@
 
 using FrederickNguyen.DomainCore.Commands;
 using FrederickNguyen.DomainCore.Events;
+using FrederickNguyen.DomainCore.EventSourcing;
 using FrederickNguyen.DomainCore.Notification;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.CommandHandlers;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.Commands;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.EventHandlers;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.Events;
-using FrederickNguyen.DomainLayer.AggregatesModels.Products.CommandHandlers;
-using FrederickNguyen.DomainLayer.AggregatesModels.Products.Commands;
-using FrederickNguyen.DomainLayer.AggregatesModels.Products.Events;
 using FrederickNguyen.DomainLayer.Services.Checkout;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
@@ -48,18 +46,13 @@ namespace FrederickNguyen.Infrastructure.CrossCutting.IoC
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
-            services.AddScoped<INotificationHandler<CustomerCreatedEvent>, DomainEventHandler<CustomerCreatedEvent>>();
             services.AddScoped<INotificationHandler<CustomerCreatedEvent>, CustomerCreatedEventHandler>();
-            services.AddScoped<INotificationHandler<CustomerUpdatedEvent>, DomainEventHandler<CustomerUpdatedEvent>>();
-            services.AddScoped<INotificationHandler<ProductCreatedEvent>, DomainEventHandler<ProductCreatedEvent>>();
-            services.AddScoped<INotificationHandler<CustomerCheckOutEvent>, CustomerCheckOutEventHandler>();
-            services.AddScoped<INotificationHandler<CustomerCheckOutEvent>, DomainEventHandler<CustomerCheckOutEvent>>();
+            services.AddScoped<INotificationHandler<CustomerCreatedEvent>, EventStoreHandler<CustomerCreatedEvent>>();
+            services.AddScoped<INotificationHandler<CustomerRemovedEvent>, EventStoreHandler<CustomerRemovedEvent>>();
 
             // Domain - Commands
-            services.AddScoped<IRequestHandler<CreateCustomerCommand>, CustomerCommandHandler>();
-            services.AddScoped<IRequestHandler<UpdateCustomerCommand>, CustomerCommandHandler>();
-            services.AddScoped<IRequestHandler<RemoveCustomerCommand>, CustomerCommandHandler>();
-            services.AddScoped<IRequestHandler<CreateProductCommand>, ProductCommandHandler>();
+            services.AddScoped<IRequestHandler<CreateCustomerCommand, bool>, CustomerCommandHandler>();
+            services.AddScoped<IRequestHandler<RemoveCustomerCommand, bool>, CustomerCommandHandler>();
 
             // Domain - Services
             services.AddTransient<CheckoutService>();

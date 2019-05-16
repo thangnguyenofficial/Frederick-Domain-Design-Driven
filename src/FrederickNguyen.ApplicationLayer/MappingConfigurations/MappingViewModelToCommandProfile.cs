@@ -30,12 +30,9 @@ namespace FrederickNguyen.ApplicationLayer.MappingConfigurations
         public MappingViewModelToCommandProfile()
         {
             CreateMap<AddNewCustomerViewModel, CreateCustomerCommand>()
-                .ConstructUsing(c => new CreateCustomerCommand(c.FirstName, c.LastName, c.Email, c.CountryId));
-            CreateMap<UpdateCustomerViewModel, UpdateCustomerCommand>()
-                .ConstructUsing(c => new UpdateCustomerCommand(c.CustomerId, c.FirstName, c.LastName, c.CountryId));
+                .ConstructUsing(c => new CreateCustomerCommand(c.FirstName, c.LastName, c.Email, c.Password, c.CountryId));
             CreateMap<RemoveCustomerViewModel, RemoveCustomerCommand>()
                .ConstructUsing(c => new RemoveCustomerCommand(c.CustomerId));
-
             CreateMap<AddNewProductViewModel, CreateProductCommand>()
                .ConstructUsing(c => new CreateProductCommand(c.Name, c.Code, c.Quantity, c.Cost));
         }

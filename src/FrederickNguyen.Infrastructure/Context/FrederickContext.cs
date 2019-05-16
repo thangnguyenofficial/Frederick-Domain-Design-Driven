@@ -13,7 +13,6 @@
 // ***********************************************************************
 
 using System.IO;
-using FrederickNguyen.DomainLayer.AggregatesModels.Countries;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.Models;
 using FrederickNguyen.DomainLayer.AggregatesModels.Products.Models;
 using FrederickNguyen.DomainLayer.AggregatesModels.Purchases.Models;
@@ -35,12 +34,6 @@ namespace FrederickNguyen.Infrastructure.Data.Context
         /// </summary>
         /// <value>The customers.</value>
         public DbSet<Customer> Customers { get; set; }
-
-        /// <summary>
-        /// Gets or sets the countries.
-        /// </summary>
-        /// <value>The countries.</value>
-        public DbSet<Country> Countries { get; set; }
 
         /// <summary>
         /// Gets or sets the products.
@@ -86,10 +79,10 @@ namespace FrederickNguyen.Infrastructure.Data.Context
 
             //model builder
             modelBuilder.ApplyConfiguration(new CustomerEntityTypeConfiguration());
-            modelBuilder.ApplyConfiguration(new CountryEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new ProductEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PurchaseEntityTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PurchasedProductEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new CreditCardEntityTypeConfiguration());
         }
 
         /// <summary>

@@ -15,27 +15,27 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using FrederickNguyen.DomainCore.Logging;
+using FrederickNguyen.DomainCore.Events;
 using FrederickNguyen.DomainCore.Repository;
 using Newtonsoft.Json;
 
-namespace FrederickNguyen.DomainCore.Events
+namespace FrederickNguyen.DomainCore.EventSourcing
 {
     /// <summary>
     /// Class DomainEventHandler.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public class DomainEventHandler<T> : IEventHandler<T> where T : DomainEvent
+    public class EventStoreHandler<T> : IEventHandler<T> where T : DomainEvent
     {
-        private readonly IDomainEventRepository _domainEventRepository;
+        private readonly IEventStoreRepository _eventStoreRepository;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainEventHandler{T}" /> class.
+        /// Initializes a new instance of the <see cref="EventStoreHandler{T}" /> class.
         /// </summary>
-        /// <param name="domainEventRepository">The domain event repository.</param>
-        public DomainEventHandler(IDomainEventRepository domainEventRepository)
+        /// <param name="eventStoreRepository">The domain event repository.</param>
+        public EventStoreHandler(IEventStoreRepository eventStoreRepository)
         {
-            _domainEventRepository = domainEventRepository;
+            _eventStoreRepository = eventStoreRepository;
         }
 
         /// <summary>
@@ -50,7 +50,7 @@ namespace FrederickNguyen.DomainCore.Events
             @event.CorrelationId = Guid.NewGuid();
             @event.Content = JsonConvert.SerializeObject(@event.Args);
 
-            _domainEventRepository.Add(@event);
+            _eventStoreRepository.Add(@event);
 
             return Task.CompletedTask;
         }

@@ -104,7 +104,7 @@ namespace FrederickNguyen.DomainLayer.Services.Checkout
             _purchaseRepository.Add(purchase);
             cart.Clear();
 
-            _eventDispatcher.RaiseEvent(new CustomerCheckOutEvent { Purchase = purchase });
+            //_eventDispatcher.RaiseEvent(new CustomerCheckOutEvent { Purchase = purchase });
 
             return purchase;
         }

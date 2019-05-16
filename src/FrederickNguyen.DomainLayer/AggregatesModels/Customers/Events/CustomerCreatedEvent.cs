@@ -14,6 +14,7 @@
 
 using FrederickNguyen.DomainCore.Events;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.Models;
+using MediatR;
 
 namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Events
 {
@@ -37,7 +38,6 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Events
             Args.Add("FirstName", Customer.FirstName);
             Args.Add("LastName", Customer.LastName);
             Args.Add("Email", Customer.Email);
-            Args.Add("Country", Customer.CountryId);
         }
     }
 }

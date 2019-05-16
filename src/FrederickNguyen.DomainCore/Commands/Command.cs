@@ -21,7 +21,7 @@ namespace FrederickNguyen.DomainCore.Commands
     /// <summary>
     /// Class Command.
     /// </summary>
-    public abstract class Command : IRequest
+    public abstract class Command : IRequest<bool>
     {
         /// <summary>
         /// Gets or sets the type of the message.

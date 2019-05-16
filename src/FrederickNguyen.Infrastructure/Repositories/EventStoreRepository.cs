@@ -6,22 +6,23 @@
 // Last Modified By : thangnd
 // Last Modified On : 07-11-2018
 // ***********************************************************************
-// <copyright file="DomainEventRepository.cs" company="FrederickNguyen.Infrastructure.Data">
+// <copyright file="EventStoreRepository.cs" company="FrederickNguyen.Infrastructure.Data">
 //     Copyright (c) by adguard. All rights reserved.
 // </copyright>
 // <summary></summary>
 // ***********************************************************************
 
 using FrederickNguyen.DomainCore.Events;
+using FrederickNguyen.DomainCore.EventSourcing;
 using FrederickNguyen.DomainCore.Repository;
 using FrederickNguyen.Infrastructure.Data.Context;
 
 namespace FrederickNguyen.Infrastructure.Data.Repositories
 {
     /// <summary>
-    /// Class DomainEventRepository.
+    /// Class EventStoreRepository.
     /// </summary>
-    public class DomainEventRepository : IDomainEventRepository
+    public class EventStoreRepository : IEventStoreRepository
     {
         /// <summary>
         /// The context
@@ -29,10 +30,10 @@ namespace FrederickNguyen.Infrastructure.Data.Repositories
         private readonly EventStoreContext _context;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainEventRepository"/> class.
+        /// Initializes a new instance of the <see cref="EventStoreRepository"/> class.
         /// </summary>
         /// <param name="context">The context.</param>
-        public DomainEventRepository(EventStoreContext context)
+        public EventStoreRepository(EventStoreContext context)
         {
             _context = context;
         }
@@ -45,7 +46,7 @@ namespace FrederickNguyen.Infrastructure.Data.Repositories
         /// <exception cref="System.NotImplementedException"></exception>
         public void Add<TDomainEvent>(TDomainEvent domainEvent) where TDomainEvent : DomainEvent
         {
-            _context.DomainEventRecords.Add(new DomainEventRecord()
+            _context.EventStoreRecords.Add(new EventStoreRecord
             {
                 Created = domainEvent.Created,
                 Type = domainEvent.Type,

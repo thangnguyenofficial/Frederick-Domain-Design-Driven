@@ -13,6 +13,7 @@
 // ***********************************************************************
 
 using System;
+using System.Threading.Tasks;
 using FrederickNguyen.ApplicationLayer.DataTransferObjects;
 using FrederickNguyen.ApplicationLayer.Models;
 
@@ -48,18 +49,12 @@ namespace FrederickNguyen.ApplicationLayer.Services
         /// Adds the specified model.
         /// </summary>
         /// <param name="model">The model.</param>
-        void Add(AddNewCustomerViewModel model);
-
-        /// <summary>
-        /// Updates the specified model.
-        /// </summary>
-        /// <param name="model">The model.</param>
-        void Update(UpdateCustomerViewModel model);
+        Task<bool> Add(AddNewCustomerViewModel model);
 
         /// <summary>
         /// Removes the specified model.
         /// </summary>
         /// <param name="model">The model.</param>
-        void Remove(RemoveCustomerViewModel model);
+        Task<bool> Remove(RemoveCustomerViewModel model);
     }
 }

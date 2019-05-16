@@ -27,6 +27,6 @@ namespace FrederickNguyen.DomainCore.Commands
         /// <typeparam name="T"></typeparam>
         /// <param name="command">The command.</param>
         /// <returns>Task.</returns>
-        Task Send<T>(T command) where T : Command;
+        Task<bool> Send<T>(T command) where T : Command;
     }
 }

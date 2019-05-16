@@ -33,7 +33,7 @@ namespace FrederickNguyen.DomainCore.Events
         {
             _mediator = mediator;
         }
-
+        
         /// <summary>
         /// Raises the event.
         /// </summary>

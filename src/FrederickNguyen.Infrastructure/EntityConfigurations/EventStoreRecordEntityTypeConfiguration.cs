@@ -13,23 +13,24 @@
 // ***********************************************************************
 
 using FrederickNguyen.DomainCore.Events;
+using FrederickNguyen.DomainCore.EventSourcing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FrederickNguyen.Infrastructure.Data.EntityConfigurations
 {
     /// <summary>
-    /// Class CountryEntityTypeConfiguration.
+    /// Class EventStoreRecordEntityTypeConfiguration.
     /// </summary>
-    public class DomainEventRecordEntityTypeConfiguration : IEntityTypeConfiguration<DomainEventRecord>
+    public class EventStoreRecordEntityTypeConfiguration : IEntityTypeConfiguration<EventStoreRecord>
     {
         /// <summary>
         /// Configures the specified country configuration.
         /// </summary>
         /// <param name="countryConfiguration">The country configuration.</param>
-        public void Configure(EntityTypeBuilder<DomainEventRecord> countryConfiguration )
+        public void Configure(EntityTypeBuilder<EventStoreRecord> countryConfiguration )
         {
-            countryConfiguration.ToTable("DomainEventRecord");
+            countryConfiguration.ToTable("EventStoreRecord");
             countryConfiguration.HasKey(b => b.CorrelationId);
         }
     }

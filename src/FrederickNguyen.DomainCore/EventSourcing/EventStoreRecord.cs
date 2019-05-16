@@ -1,12 +1,12 @@
 ﻿
 using System;
 
-namespace FrederickNguyen.DomainCore.Events
+namespace FrederickNguyen.DomainCore.EventSourcing
 {
     /// <summary>
-    /// Class DomainEventRecord.
+    /// Class EventStoreRecord.
     /// </summary>
-    public class DomainEventRecord 
+    public class EventStoreRecord
     {
         /// <summary>
         /// Gets or sets the created.

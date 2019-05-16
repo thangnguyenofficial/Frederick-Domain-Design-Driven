@@ -30,6 +30,8 @@ namespace FrederickNguyen.Infrastructure.Data.EntityConfigurations
         public void Configure(EntityTypeBuilder<PurchasedProduct> purchaseConfiguration)
         {
             purchaseConfiguration.ToTable("PurchasedProduct");
+            purchaseConfiguration.Ignore(b => b.DomainEvents);
+        
             purchaseConfiguration.HasKey(b => b.Id);
         }
     }

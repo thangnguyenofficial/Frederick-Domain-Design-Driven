@@ -9,8 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Infrastructure\Filters\" />
-    <Folder Include="Infrastructure\Services\" />
+    <Compile Remove="Infrastructure\Services\**" />
+    <Content Remove="Infrastructure\Services\**" />
+    <EmbeddedResource Remove="Infrastructure\Services\**" />
+    <None Remove="Infrastructure\Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
@@ -37,6 +42,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FrederickNguyen.ApplicationLayer\FrederickNguyen.ApplicationLayer.csproj" />
+    <ProjectReference Include="..\FrederickNguyen.DomainLayer\FrederickNguyen.DomainLayer.csproj" />
     <ProjectReference Include="..\FrederickNguyen.Infrastructure.Components\FrederickNguyen.Infrastructure.Components.csproj" />
     <ProjectReference Include="..\FrederickNguyen.Infrastructure.CrossCutting.IoC\FrederickNguyen.Infrastructure.CrossCutting.IoC.csproj" />
   </ItemGroup>

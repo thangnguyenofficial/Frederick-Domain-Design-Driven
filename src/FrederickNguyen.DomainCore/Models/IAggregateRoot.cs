@@ -12,6 +12,8 @@
 // <summary></summary>
 // ***********************************************************************
 
+using System;
+
 namespace FrederickNguyen.DomainCore.Models
 {
     /// <summary>

@@ -1,12 +1,12 @@
 ﻿// ***********************************************************************
 // Assembly         : FrederickNguyen.DomainLayer
 // Author           : thangnd
-// Created          : 07-10-2018
+// Created          : 07-05-2018
 //
 // Last Modified By : thangnd
-// Last Modified On : 07-10-2018
+// Last Modified On : 07-05-2018
 // ***********************************************************************
-// <copyright file="CustomerUpdatedEvent.cs" company="FrederickNguyen.DomainLayer">
+// <copyright file="CustomerCreatedEvents.cs" company="FrederickNguyen.DomainLayer">
 //     Copyright (c) by adguard. All rights reserved.
 // </copyright>
 // <summary></summary>
@@ -14,10 +14,14 @@
 
 using FrederickNguyen.DomainCore.Events;
 using FrederickNguyen.DomainLayer.AggregatesModels.Customers.Models;
+using MediatR;
 
 namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Events
 {
-    public class CustomerUpdatedEvent : DomainEvent
+    /// <summary>
+    /// Class CustomerRemovedEvent.
+    /// </summary>
+    public class CustomerRemovedEvent : DomainEvent
     {
         /// <summary>
         /// Gets or sets the customer.
@@ -28,11 +32,12 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Events
         /// <summary>
         /// Flattens this instance.
         /// </summary>
+        /// <exception cref="System.NotImplementedException"></exception>
         public override void Flatten()
         {
             Args.Add("FirstName", Customer.FirstName);
             Args.Add("LastName", Customer.LastName);
-            Args.Add("Country", Customer.CountryId);
+            Args.Add("Email", Customer.Email);
         }
     }
 }

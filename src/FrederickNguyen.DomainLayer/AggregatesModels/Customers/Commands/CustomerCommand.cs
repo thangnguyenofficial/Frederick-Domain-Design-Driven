@@ -47,21 +47,9 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Commands
         public string Email { get; set; }
 
         /// <summary>
-        /// Gets or sets the security stamp.
-        /// </summary>
-        /// <value>The security stamp.</value>
-        public string SecurityStamp { get; set; }
-
-        /// <summary>
         /// Gets or sets the password.
         /// </summary>
         /// <value>The password.</value>
-        public string PasswordHash { get; set; }
-
-        /// <summary>
-        /// Gets or sets the country identifier.
-        /// </summary>
-        /// <value>The country identifier.</value>
-        public Guid CountryId { get; set; }
+        public string Password { get; set; }
     }
 }

@@ -30,6 +30,7 @@ namespace FrederickNguyen.Infrastructure.Data.EntityConfigurations
         public void Configure(EntityTypeBuilder<Product> productConfiguration)
         {
             productConfiguration.ToTable("Product");
+            productConfiguration.Ignore(b => b.DomainEvents);
             productConfiguration.HasKey(b => b.Id);
             productConfiguration.Property(b => b.Cost).HasColumnType("money");
         }

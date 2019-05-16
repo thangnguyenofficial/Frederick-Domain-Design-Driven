@@ -13,7 +13,8 @@
 // ***********************************************************************
 
 using System;
-using System.Linq;
+using System.Net;
+using System.Threading.Tasks;
 using FrederickNguyen.ApplicationLayer.Models;
 using FrederickNguyen.ApplicationLayer.Services;
 using FrederickNguyen.DomainCore.Commands;
@@ -114,44 +115,13 @@ namespace FrederickNguyen.WebApi.Controllers
         /// <param name="model">The model.</param>
         /// <returns>IActionResult.</returns>
         [HttpPost("Add")]
-        public IActionResult AddCustomer([FromBody] AddNewCustomerViewModel model)
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> AddCustomer([FromBody] AddNewCustomerViewModel model)
         {
-            try
-            {
-                if (!ModelState.IsValid) return BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
-
-                _customerService.Add(model);
-
-                if (Errors.Any()) return BadRequest(new { IsSuccessStatusCode = false, Errors });
-                return Ok(new { IsSuccessStatusCode = true });
-            }
-            catch (Exception ex)
-            {
-                return NotFound(new { IsSuccessStatusCode = false, Errors = ex.Message });
-            }
-        }
-
-        /// <summary>
-        /// Updates the customer.
-        /// </summary>
-        /// <param name="model">The model.</param>
-        /// <returns>IActionResult.</returns>
-        [HttpPatch("update")]
-        public IActionResult UpdateCustomer([FromBody] UpdateCustomerViewModel model)
-        {
-            try
-            {
-                if (!ModelState.IsValid) return BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
-
-                _customerService.Update(model);
-
-                if (Errors.Any()) return BadRequest(new { IsSuccessStatusCode = false, Errors });
-                return Ok(new { IsSuccessStatusCode = true });
-            }
-            catch (Exception ex)
-            {
-                return NotFound(new { IsSuccessStatusCode = false, Errors = ex.Message });
-            }
+            if (!ModelState.IsValid) return BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
+            var commandResult = await _customerService.Add(model);
+            return commandResult ? Ok(new { IsSuccessStatusCode = true }) : (IActionResult)BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
         }
 
         /// <summary>
@@ -160,21 +130,13 @@ namespace FrederickNguyen.WebApi.Controllers
         /// <param name="model">The model.</param>
         /// <returns>IActionResult.</returns>
         [HttpDelete("delete")]
-        public IActionResult DeleteCustomer([FromBody] RemoveCustomerViewModel model)
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        public async Task<IActionResult> DeleteCustomer([FromBody] RemoveCustomerViewModel model)
         {
-            try
-            {
-                if (!ModelState.IsValid) return BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
-
-                _customerService.Remove(model);
-
-                if (Errors.Any()) return BadRequest(new { IsSuccessStatusCode = false, Errors });
-                return Ok(new { IsSuccessStatusCode = true });
-            }
-            catch (Exception ex)
-            {
-                return NotFound(new { IsSuccessStatusCode = false, Errors = ex.Message });
-            }
+            if (!ModelState.IsValid) return BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
+            var commandResult = await _customerService.Remove(model);
+            return commandResult ? Ok(new { IsSuccessStatusCode = true }) : (IActionResult)BadRequest(new { IsSuccessStatusCode = false, Errors = ModelState });
         }
     }
 }

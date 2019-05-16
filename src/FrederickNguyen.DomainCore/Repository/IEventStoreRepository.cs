@@ -6,7 +6,7 @@
 // Last Modified By : thangnd
 // Last Modified On : 07-11-2018
 // ***********************************************************************
-// <copyright file="IDomainEventRepository.cs" company="FrederickNguyen.DomainLayer">
+// <copyright file="IEventStoreRepository.cs" company="FrederickNguyen.DomainLayer">
 //     Copyright (c) by adguard. All rights reserved.
 // </copyright>
 // <summary></summary>
@@ -17,9 +17,9 @@ using FrederickNguyen.DomainCore.Events;
 namespace FrederickNguyen.DomainCore.Repository
 {
     /// <summary>
-    /// Interface IDomainEventRepository
+    /// Interface IEventStoreRepository
     /// </summary>
-    public interface IDomainEventRepository
+    public interface IEventStoreRepository
     {
         /// <summary>
         /// Adds the specified domain event.

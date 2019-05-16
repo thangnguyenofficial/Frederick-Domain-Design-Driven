@@ -23,7 +23,7 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Commands
     public class RemoveCustomerCommand : CustomerCommand
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateCustomerCommand" /> class.
+        /// Initializes a new instance of the <see cref="RemoveCustomerCommand"/> class.
         /// </summary>
         /// <param name="id">The identifier.</param>
         public RemoveCustomerCommand(Guid id)

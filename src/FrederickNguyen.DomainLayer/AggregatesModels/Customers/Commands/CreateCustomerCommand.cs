@@ -23,18 +23,19 @@ namespace FrederickNguyen.DomainLayer.AggregatesModels.Customers.Commands
     public sealed class CreateCustomerCommand : CustomerCommand
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CreateCustomerCommand"/> class.
+        /// Initializes a new instance of the <see cref="CreateCustomerCommand" /> class.
         /// </summary>
         /// <param name="firstName">The first name.</param>
         /// <param name="lastName">The last name.</param>
         /// <param name="email">The email.</param>
+        /// <param name="password">The password.</param>
         /// <param name="countryId">The country identifier.</param>
-        public CreateCustomerCommand(string firstName, string lastName, string email, Guid countryId)
+        public CreateCustomerCommand(string firstName, string lastName, string email, string password, Guid countryId)
         {
             FirstName = firstName;
             LastName = lastName;
             Email = email;
-            CountryId = countryId;
+            Password = password;
         }
 
         /// <summary>

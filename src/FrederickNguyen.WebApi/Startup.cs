@@ -13,7 +13,13 @@
 // ***********************************************************************
 
 using AutoMapper;
+using FrederickNguyen.DomainCore.Commands;
+using FrederickNguyen.DomainCore.Notification;
+using FrederickNguyen.DomainCore.Repository;
 using FrederickNguyen.Infrastructure.CrossCutting.IoC;
+using FrederickNguyen.Infrastructure.Data.Repositories;
+using FrederickNguyen.WebApi.Infrastructure.Behaviors;
+using FrederickNguyen.WebApi.Infrastructure.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -48,7 +54,10 @@ namespace FrederickNguyen.WebApi
         /// <param name="services">The services.</param>
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(typeof(HttpGlobalExceptionFilter));
+            }).AddControllersAsServices();
 
             // Register the Swagger generator, defining 1 or more Swagger documents
             services.AddSwaggerGen(options =>
@@ -99,6 +108,8 @@ namespace FrederickNguyen.WebApi
         private static void RegisterServices(IServiceCollection services)
         {
             NativeInjectorBootStrapper.Register(services);
+
+            services.AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
         }
     }
 }

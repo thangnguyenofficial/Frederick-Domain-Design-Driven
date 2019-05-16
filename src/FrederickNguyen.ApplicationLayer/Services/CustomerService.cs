@@ -14,6 +14,7 @@
 
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using AutoMapper;
 using FrederickNguyen.ApplicationLayer.DataTransferObjects;
 using FrederickNguyen.ApplicationLayer.Models;
@@ -27,6 +28,7 @@ using FrederickNguyen.DomainLayer.AggregatesModels.Customers.Specification;
 using FrederickNguyen.DomainLayer.AggregatesModels.Purchases.Models;
 using FrederickNguyen.DomainLayer.AggregatesModels.Purchases.Specification;
 using FrederickNguyen.Infrastructure.Components.Cryptography;
+using MediatR;
 
 namespace FrederickNguyen.ApplicationLayer.Services
 {
@@ -40,7 +42,8 @@ namespace FrederickNguyen.ApplicationLayer.Services
         private readonly ICommandDispatcher _commandDispatcher;
         private readonly IRepository<Purchase> _purchaseRepository;
         private readonly IRepository<PurchasedProduct> _purchaseProductRepository;
-
+        private readonly IMediator _mediator;
+        
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomerService" /> class.
         /// </summary>
@@ -50,13 +53,14 @@ namespace FrederickNguyen.ApplicationLayer.Services
         /// <param name="purchaseProductRepository">The purchase product repository.</param>
         /// <param name="purchaseRepository">The purchase repository.</param>
         public CustomerService(IMapper mapper, ICustomerRepository customerRepository, ICommandDispatcher commandDispatcher,
-            IRepository<PurchasedProduct> purchaseProductRepository, IRepository<Purchase> purchaseRepository)
+            IRepository<PurchasedProduct> purchaseProductRepository, IRepository<Purchase> purchaseRepository, IMediator mediator)
         {
             _mapper = mapper;
             _purchaseRepository = purchaseRepository;
             _customerRepository = customerRepository;
             _commandDispatcher = commandDispatcher;
             _purchaseProductRepository = purchaseProductRepository;
+            _mediator = mediator;
         }
 
         /// <summary>
@@ -88,36 +92,20 @@ namespace FrederickNguyen.ApplicationLayer.Services
         /// Adds the specified model.
         /// </summary>
         /// <param name="model">The model.</param>
-        public void Add(AddNewCustomerViewModel model)
+        public async Task<bool> Add(AddNewCustomerViewModel model)
         {
-            const int saltLength = 64;
             var createCustomerCommand = _mapper.Map<CreateCustomerCommand>(model);
-            var passwordResult = PasswordWithSaltHasher.ActionEncrypt(model.Password, saltLength);
-
-            createCustomerCommand.SecurityStamp = passwordResult.Salt;
-            createCustomerCommand.PasswordHash = passwordResult.Digest;
-
-            _commandDispatcher.Send(createCustomerCommand);
-        }
-
-        /// <summary>
-        /// Updates the specified model.
-        /// </summary>
-        /// <param name="model">The model.</param>
-        public void Update(UpdateCustomerViewModel model)
-        {
-            var updateCustomerCommand = _mapper.Map<UpdateCustomerCommand>(model);
-            _commandDispatcher.Send(updateCustomerCommand);
+            return await _commandDispatcher.Send(createCustomerCommand);
         }
 
         /// <summary>
         /// Removes the specified model.
         /// </summary>
         /// <param name="model">The model.</param>
-        public void Remove(RemoveCustomerViewModel model)
+        public async Task<bool> Remove(RemoveCustomerViewModel model)
         {
             var removeCustomerCommand = _mapper.Map<RemoveCustomerCommand>(model);
-            _commandDispatcher.Send(removeCustomerCommand);
+            return await _commandDispatcher.Send(removeCustomerCommand);
         }
 
         /// <summary>

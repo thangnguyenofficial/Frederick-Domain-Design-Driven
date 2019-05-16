@@ -40,9 +40,10 @@ E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\bin\
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainLayer.pdb
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\bin\Debug\netcoreapp2.0\FrederickNguyen.Infrastructure.Data.pdb
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\bin\Debug\netcoreapp2.0\FrederickNguyen.DomainCore.pdb
-E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.csprojResolveAssemblyReference.cache
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.csproj.CoreCompileInputs.cache
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.AssemblyInfoInputs.cache
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.AssemblyInfo.cs
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.dll
 E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.pdb
+E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.csprojAssemblyReference.cache
+E:\Project\Github\Frederick-Domain-Design-Driven\src\FrederickNguyen.WebApi\obj\Debug\netcoreapp2.0\FrederickNguyen.WebApi.csproj.CopyComplete

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FrederickNguyen.DomainLayer\FrederickNguyen.DomainLayer.csproj" />
-    <ProjectReference Include="..\FrederickNguyen.Infrastructure.Components\FrederickNguyen.Infrastructure.Components.csproj" />
     <ProjectReference Include="..\FrederickNguyen.Infrastructure\FrederickNguyen.Infrastructure.Data.csproj" />
   </ItemGroup>
 

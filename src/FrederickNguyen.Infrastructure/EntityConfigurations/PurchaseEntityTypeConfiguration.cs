@@ -31,6 +31,8 @@ namespace FrederickNguyen.Infrastructure.Data.EntityConfigurations
         {
             purchaseConfiguration.ToTable("Purchase");
             purchaseConfiguration.HasKey(b => b.Id);
+            purchaseConfiguration.Ignore(b => b.DomainEvents);
+
             purchaseConfiguration.Property(b => b.TotalPrice).HasColumnType("money");
             purchaseConfiguration.HasMany(c => c.Products);
         }

@@ -40,9 +40,9 @@ namespace FrederickNguyen.DomainCore.Commands
         /// <param name="command">The command.</param>
         /// <returns>Task.</returns>
         /// <exception cref="System.NotImplementedException"></exception>
-        public Task Send<T>(T command) where T : Command
+        public async Task<bool> Send<T>(T command) where T : Command
         {
-            return _mediator.Send(command);
+            return await _mediator.Send(command);
         }
     }
 }

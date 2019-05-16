@@ -13,6 +13,8 @@
 // ***********************************************************************
 
 using System;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace FrederickNguyen.DomainCore.UnitOfWork
 {
@@ -27,6 +29,13 @@ namespace FrederickNguyen.DomainCore.UnitOfWork
         /// </summary>
         int Commit();
 
+        /// <summary>
+        /// Commits the asynchronous.
+        /// </summary>
+        /// <param name="cancellationToken">The cancellation token.</param>
+        /// <returns>Task&lt;System.Boolean&gt;.</returns>
+        Task<bool> CommitAsync(CancellationToken cancellationToken = default(CancellationToken));
+        
         /// <summary>
         /// Rollbacks this instance.
         /// </summary>
